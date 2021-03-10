@@ -232,7 +232,7 @@ Twitter: <https://twitter.com/CreativeTim>
 
 Facebook: <https://www.facebook.com/CreativeTim>
 
-Dribbble: <https://dribbble.com/creativetim>
+Dribbble: <https://dribbble.com/>
 
 Google+: <https://plus.google.com/>
 
