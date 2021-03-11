@@ -230,7 +230,7 @@ Social Media:
 
 Twitter: <https://twitter.com/CreativeTim>
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Facebook: <https://www.facebook.com/>
 
 Dribbble: <https://dribbble.com/>
 
