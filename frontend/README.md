@@ -232,8 +232,8 @@ Twitter: <https://twitter.com/CreativeTim>
 
 Facebook: <https://www.facebook.com/CreativeTim>
 
-Dribbble: <https://dribbble.com/creativetim>
+Dribbble: <https://dribbble.com/>
 
-Google+: <https://plus.google.com/+CreativetimPage>
+Google+: <https://plus.google.com/>
 
-Instagram: <https://instagram.com/creativetimofficial>
+Instagram: <https://instagram.com/>
