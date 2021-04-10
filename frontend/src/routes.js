@@ -1,86 +1,66 @@
-/*!
-
-=========================================================
-* Material Dashboard React - v1.9.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
+import Carpool from "@material-ui/icons/EmojiTransportation";
+import Person from "@material-ui/icons/PersonAdd";
+import GitHubIcon from '@material-ui/icons/GitHub';
 import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
-import Language from "@material-ui/icons/Language";
+import Calculator from '@material-ui/icons/Dialpad';
+
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
+import CarpoolPage from "views/Dashboard/Dashboard.js";
+import PerfilUsuario from "views/PerfilUsuario/PerfilUsuario.js";
+import Reservas from "views/Reservas/Reservas.js";
+import Github from "views/Github/Github.js";
+import Calculadora1 from "views/Calculadora/Calculadora.js";
 import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
-import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 // core components/views for RTL layout
 import RTLPage from "views/RTLPage/RTLPage.js";
 
-const dashboardRoutes = [
+const CarpoolRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    rtlName: "لوحة القيادة",
-    icon: Dashboard,
-    component: DashboardPage,
+    path: "/Carpool",
+    name: "Carpool",
+    rtlName: "",
+    icon: Carpool,
+    component: CarpoolPage,
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "User Profile",
-    rtlName: "ملف تعريفي للمستخدم",
+    path: "/Sesion",
+    name: "Login",
+    rtlName: "",
+    icon: Calculator,
+    component: Calculadora1,
+    layout: "/admin"
+  },  
+  {
+    path: "/Registro",
+    name: "Registro",
+    rtlName: "",
+    icon: Calculator,
+    component: Calculadora1,
+    layout: "/admin"
+  },
+  {
+    path: "/usuario",
+    name: "perfil de usuario",
+    rtlName: "",
     icon: Person,
-    component: UserProfile,
+    component: PerfilUsuario,
     layout: "/admin"
   },
   {
-    path: "/table",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
+    path: "/Reservas",
+    name: "Reservas",
+    rtlName: "",
     icon: "content_paste",
-    component: TableList,
+    component: Reservas,
     layout: "/admin"
   },
   {
-    path: "/typography",
-    name: "Typography",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    rtlName: "خرائط",
+    path: "/Mapas",
+    name: "Mapas",
+    rtlName: "",
     icon: LocationOn,
     component: Maps,
     layout: "/admin"
@@ -88,27 +68,28 @@ const dashboardRoutes = [
   {
     path: "/notifications",
     name: "Notifications",
-    rtlName: "إخطارات",
+    rtlName: "",
     icon: Notifications,
     component: NotificationsPage,
     layout: "/admin"
   },
   {
-    path: "/rtl-page",
-    name: "RTL Support",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-    component: RTLPage,
-    layout: "/rtl"
+    path: "/Github",
+    name: "Github",
+    rtlName: "",
+    icon: GitHubIcon,
+    component: Github,
+    layout: "/admin"
   },
   {
-    path: "/upgrade-to-pro",
-    name: "Upgrade To PRO",
-    rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: UpgradeToPro,
+    path: "/Calculadora",
+    name: "Calculadora",
+    rtlName: "",
+    icon: Calculator,
+    component: Calculadora1,
     layout: "/admin"
-  }
+  },
+  
 ];
 
-export default dashboardRoutes;
+export default CarpoolRoutes;
