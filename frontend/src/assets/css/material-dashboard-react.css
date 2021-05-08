@@ -133,13 +133,13 @@ h6 {
 }
 
 a {
-  color: #9c27b0;
+  color: #2779b0;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #89229b;
+  color: #24229b;
   text-decoration: none;
 }
 
@@ -251,7 +251,7 @@ footer ul li a:hover {
   border-radius: 8px 0 0 8px;
   text-align: center;
   top: 120px;
-  .badge-primary-background-color: #9c27b0;
+  badge-primary-background-color: #27a7b0;
 }
 
 .fixed-plugin .SocialMediaShareButton,
@@ -332,11 +332,11 @@ footer ul li a:hover {
 }
 
 .fixed-plugin .badge-purple {
-  background-color: #9c27b0;
+  background-color: #14046d;
 }
 
 .fixed-plugin .badge-blue {
-  background-color: #00bcd4;
+  background-color: #1791a15b;
 }
 
 .fixed-plugin .badge-green {
@@ -344,11 +344,11 @@ footer ul li a:hover {
 }
 
 .fixed-plugin .badge-orange {
-  background-color: #ff9800;
+  background-color: #006eff;
 }
 
 .fixed-plugin .badge-red {
-  background-color: #f44336;
+  background-color: #7836f4;
 }
 
 .fixed-plugin h5 {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
@@ -9,21 +9,22 @@ import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
-import logo from "assets/img/reactlogo.png";
+import logo from "assets/img/CarpoolLogo.png";
+
+import Cookies from 'universal-cookie';
 
 let ps;
 
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/login") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -39,6 +40,36 @@ const switchRoutes = (
 );
 
 const useStyles = makeStyles(styles);
+const cookies = new Cookies();
+
+class Menu extends Component {
+  cerrarSesion=()=>{
+      cookies.remove('id', {path: "/"});
+      cookies.remove('apellido_paterno', {path: "/"});
+      cookies.remove('apellido_materno', {path: "/"});
+      cookies.remove('nombre', {path: "/"});
+      cookies.remove('username', {path: "/"});
+      window.location.href='./';
+  }
+
+  componentDidMount() {
+      if(!cookies.get('username')){
+          window.location.href="./";
+      }
+  }
+  render() {
+    console.log('id: '+ cookies.get('id'));
+    console.log('apellido_paterno: '+cookies.get('apellido_paterno'));
+    console.log('apellido_materno: '+cookies.get('apellido_materno'));
+    console.log('nombre: '+cookies.get('nombre'));
+    console.log('username: '+cookies.get('username'));
+    return (
+        <div>
+         <button onClick={()=>this.cerrarSesion()}>Cerrar Sesión</button>
+        </div>
+    );
+}
+}
 
 export default function Admin({ ...rest }) {
   // styles
@@ -92,6 +123,7 @@ export default function Admin({ ...rest }) {
       window.removeEventListener("resize", resizeFunction);
     };
   }, [mainPanel]);
+  
   return (
     <div className={classes.wrapper}>
       <Sidebar
@@ -119,14 +151,6 @@ export default function Admin({ ...rest }) {
           <div className={classes.map}>{switchRoutes}</div>
         )}
         {getRoute() ? <Footer /> : null}
-        <FixedPlugin
-          handleImageClick={handleImageClick}
-          handleColorClick={handleColorClick}
-          bgColor={color}
-          bgImage={image}
-          handleFixedClick={handleFixedClick}
-          fixedClasses={fixedClasses}
-        />
       </div>
     </div>
   );

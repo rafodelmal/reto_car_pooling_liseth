@@ -15,6 +15,7 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import avatar from "assets/img/faces/marc.jpg";
 
+
 const styles = {
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
@@ -44,8 +45,8 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
-              <p className={classes.cardCategoryWhite}>Complete your profile</p>
+              <h4 className={classes.cardTitleWhite}>Registro</h4>
+              <p className={classes.cardCategoryWhite}>Bienvenido al sistema de Carpooling por favor ingrese sus datos</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
@@ -176,3 +177,4 @@ export default function UserProfile() {
     </div>
   );
 }
+
